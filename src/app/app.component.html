@@ -2,8 +2,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <app-recipes *ngIf="currentView === 'Recipes'"></app-recipes>
-            <app-shopping-list *ngIf="currentView === 'ShoppingList'"></app-shopping-list>
+            <app-recipes *appUnless="currentView != 'Recipes'"></app-recipes>
+            <app-shopping-list *appUnless="currentView != 'ShoppingList'"></app-shopping-list>
         </div>
     </div>
 </div>
